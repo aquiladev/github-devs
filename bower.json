@@ -1,0 +1,9 @@
+{
+  "name": "github-devs",
+  "version": "0.1.0",
+  "description": "",
+  "dependencies": {
+  	"backbone": "1.2.3",
+    "octokat": "0.4.12"
+  }
+}
