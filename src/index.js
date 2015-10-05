@@ -2,13 +2,23 @@
     'use strict';
 
     var scripts = [
-        'src/models/home.js',
+        'src/services/router.js',
         'src/views/home/home.js',
+        'src/views/search/search.js',
     ];
 
     function onEndLoad() {
-        console.log('start');
+        var options = {
+            defaultAnimation: 'none'
+        };
+        RAD.core.initialize(null, options);
+        RAD.core.getService('service.router');
+
+        RAD.core.publish('navigation.show', {
+            container_id: '.search-holder',
+            content: 'view.search'
+        });
     }
 
-    window.scriptLoader.loadScripts(scripts, onEndLoad);
+    window.RAD.scriptLoader.loadScripts(scripts, onEndLoad);
 }(document, window));
