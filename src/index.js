@@ -4,7 +4,8 @@
     var scripts = [
         'src/services/router.js',
         'src/views/home/home.js',
-        'src/views/search/search.js',
+        'src/views/header/header.js',
+        'src/views/search/search.js'
     ];
 
     function onEndLoad() {
@@ -15,8 +16,8 @@
         RAD.core.getService('service.router');
 
         RAD.core.publish('navigation.show', {
-            container_id: '.search-holder',
-            content: 'view.search'
+            container_id: '.header-holder',
+            content: 'view.header'
         });
     }
 
