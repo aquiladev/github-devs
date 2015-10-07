@@ -3,8 +3,8 @@
         routes: {
             '': 'home',
             'home': 'home',
-            'search/:value': 'search',
-            '*actions': 'home'
+            'user/:value': 'user',
+            // '*actions': 'home'
         },
         home: function () {
             RAD.core.publish('navigation.show', {
@@ -12,12 +12,16 @@
                 content: 'view.home'
             });
         },
-        search: function(value){
-            console.log(value);
-            // RAD.core.publish('navigation.show', {
-            //     container_id: '.view-holder',
-            //     content: 'view.search'
-            // });
+        user: function(value) {
+            RAD.model('user').fetch({
+                success: function() {
+                    RAD.core.publish('navigation.show', {
+                        container_id: '.view-holder',
+                        content: 'view.user'
+                    });
+                },
+                q: value
+            });
         }
     });
 

@@ -14,6 +14,6 @@ RAD.view('view.header', RAD.Blanks.View.extend({
         e.stopPropagation();
         var value = $('#search').val();
         var service = RAD.core.getService('service.router');
-        service.router.navigate('search/' + encodeURIComponent(value), { trigger: true });
+        service.router.navigate('user/' + encodeURIComponent(value), { trigger: true });
     }
 }));

@@ -5,7 +5,8 @@
         'src/services/router.js',
         'src/views/home/home.js',
         'src/views/header/header.js',
-        'src/views/search/search.js'
+        'src/views/user/user.js',
+        'src/models/user.js'
     ];
 
     function onEndLoad() {

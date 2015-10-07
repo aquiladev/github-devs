@@ -1,0 +1,17 @@
+<div class="user" data-template="true">
+    {{# if (this.model.user) { }}
+        <div class="vcard">
+            <a class="vcard-avatar" href="#">
+                <img class="avatar" src="{{- this.model.user.avatar.url }}" alt/>
+            </a>
+            <h1 class="vcard-names">
+                <span class="vcard-fullname">{{- this.model.user.name }}</span>
+                <span class="vcard-username">{{- this.model.user.login }}</span>
+            </h1>
+        </div>
+    {{# } else { }}
+        <div class="no-results">
+            <div class="no-results-message">We didn't find any results for your search. Please try different user name.</div>
+        </div>
+    {{# } }}
+</div>

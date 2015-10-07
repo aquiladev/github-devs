@@ -1,0 +1,17 @@
+.vcard {
+  margin: 10px 0;
+}
+
+.vcard-avatar .avatar {
+    border-radius: 6px;
+    height: 230px;
+    width: 230px;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 3px;
+}
