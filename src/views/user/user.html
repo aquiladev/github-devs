@@ -1,12 +1,12 @@
 <div class="user" data-template="true">
-    {{# if (this.model.user) { }}
+    {{# if (this.model.get('login') && this.model.get('login').length) { }}
         <div class="vcard">
             <a class="vcard-avatar" href="#">
-                <img class="avatar" src="{{- this.model.user.avatar.url }}" alt/>
+                <img class="avatar" src="{{- this.model.get('avatar').url }}" alt/>
             </a>
             <h1 class="vcard-names">
-                <span class="vcard-fullname">{{- this.model.user.name }}</span>
-                <span class="vcard-username">{{- this.model.user.login }}</span>
+                <span class="vcard-fullname">{{- this.model.get('name') }}</span>
+                <span class="vcard-username">{{- this.model.get('login') }}</span>
             </h1>
         </div>
     {{# } else { }}

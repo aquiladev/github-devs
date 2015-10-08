@@ -14,7 +14,7 @@ RAD.model('user', Backbone.Model.extend({
                     return;
                 }
 
-                self.user = data;
+                self.clear().set(data);
                 if(options.success) {
                     options.success(data, options);
                 }
