@@ -5,6 +5,7 @@
   "dependencies": {
   	"jquery": "2.1.4",
   	"backbone": "1.2.3",
+    "iscroll": "4.2.5",
   	"rad.js": "1.0.7",
     "octokat": "0.4.12"
   }
